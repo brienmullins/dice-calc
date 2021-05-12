@@ -184,7 +184,7 @@
 
                 betSum += curBet;
                 afterLoss = startBank - betSum;
-                if (afterLoss <= 0) {
+                if (afterLoss < 0) {
                     break
                 }
                 bankPercent = (betSum / startBank) * 100;
