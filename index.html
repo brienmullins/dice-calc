@@ -208,7 +208,7 @@
             }
             rows.push({
                 id: betId,
-                current: curBet.toFixed(8),
+                current: (curBet * curRaise).toFixed(8),
                 bust: "Bankrupt"
             })
             document.getElementById("losses").innerText = '' + (betId - 1);
