@@ -184,7 +184,7 @@
 
                 betSum += curBet;
                 afterLoss = startBank - betSum;
-                if (afterLoss < 0) {
+                if (afterLoss <= 0) {
                     break
                 }
                 bankPercent = (betSum / startBank) * 100;
@@ -208,7 +208,7 @@
             }
             rows.push({
                 id: betId,
-                current: (curBet * curRaise).toFixed(8),
+                current: curBet.toFixed(8),
                 bust: "Bankrupt"
             })
             document.getElementById("losses").innerText = '' + (betId - 1);
